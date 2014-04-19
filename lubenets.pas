@@ -3,18 +3,15 @@ unit lubenets;
 interface
 
 uses common;
-{Задача 1, обхід 1}
+
 procedure InsertSort4_1(var A:TArray;var Vect:TVector);
-{Задача 1, обхід 2}
 procedure InsertSort4_2(var A:TArray);
-{Задача 1, обхід 3}
 procedure InsertSort4_3(var A:TArray);
-{Задача 5, обхід 6}
 procedure InsertSort4_4(var A:TArray);
 
 implementation
 
-{Процедура сортування методом вставки №4}
+
 procedure InsertSort4(var Vect:TVector; n:word);
 var
   X:integer;
@@ -38,7 +35,7 @@ begin
   end;
 end;
 
-{Процедура сортування трьохвимірного масиву методом вставки №4 задача 1, спосіб обхіду 1}
+
 procedure InsertSort4_1(var A:TArray; var Vect:TVector);
 var
   i:word;
@@ -51,7 +48,7 @@ begin
   end;
 end;
 
-{Процедура сортування матриці методом вставки №4 з використанням уявного вектора}
+
 procedure InsertSortForMatrix(var A:TMatrix; n1:word);
 var
   X:integer;
@@ -75,7 +72,6 @@ begin
   end;
 end;
 
-{Процедура сортування трьохвимірного масиву методом вставки №4 задача 1, спосіб обхіду 2 }
 procedure InsertSort4_2(var A:TArray);
 var
   i:word;
@@ -83,8 +79,7 @@ begin
   for i:=1 to p do
     InsertSortForMatrix(A[i],m*n-1);
 end;
-{Процедура сортування матриці методом вставки 
- без використання перетворення індексів чи додаткового масиву }
+
 procedure SortWithInsertLogic(var A:TMatrix);
 var
   X:integer;
@@ -133,7 +128,7 @@ begin
         end;
 end;
 
-{Процедура сортування трьохвимірного масиву методом вставки №4 задача 1, спосіб обхіду 3}
+
 procedure InsertSort4_3(var A:TArray);
 var
   i:word;
@@ -141,7 +136,7 @@ begin
   for i:=1 to p do
     SortWithInsertLogic(A[i]);
 end;
-{Процедура сортуванння трьохвимірного масиву методом вставки №4 задача 5, спосіб обходу 6}
+
 procedure InsertSort4_4(var A:TArray);
 var
   M:TMatrix;
